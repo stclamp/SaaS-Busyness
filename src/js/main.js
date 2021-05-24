@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
             modalWrapper.classList.remove('hidden');
             overlay.classList.remove('hidden');
+            disableScroll();
         });
     });
 
     const modalClose = () => {
         modalWrapper.classList.add('hidden');
         overlay.classList.add('hidden');
+        enableScroll();
     };
 
     overlay.addEventListener('click', modalClose);
@@ -66,5 +68,54 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // SMOOTH SCROLL 
+    
+    const smoothScrollElems = document.querySelectorAll('a[href^="#"]:not(a[href="#"])');
+    smoothScrollElems.forEach(link => {
+        link.addEventListener('click', (event) => {
+
+            event.preventDefault();
+            const id = link.getAttribute('href').substring(1);
+            
+
+            document.getElementById(id).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // BLOCK SCROLL 
+    const disableScroll = () => {
+        document.body.dataset.scrollY = window.scrollY;
+    
+        const scrollWidth = window.innerWidth - document.body.offsetWidth;
+    
+        document.body.style.cssText = `
+            position:fixed;
+            top: -${window.scrollY}px;
+            left: 0;
+            width: 100%;
+            overflow:hidden;
+            height:100vh;
+            padding-right: ${scrollWidth}px;
+        `;
+    };
+    
+    const enableScroll = () => {
+        document.body.style.cssText = '';
+        window.scroll({
+            top: document.body.dataset.scrollY
+        });
+    };
+
+    //BURGER 
+
+    const burgerElem = document.querySelector('.burger_menu');
+    const contentMenuElem = document.querySelector('.header__menu')
+
+    burgerElem.addEventListener('click', () => {
+        contentMenuElem.classList.toggle('header__menu-active');
+    })
 });
 

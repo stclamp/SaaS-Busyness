@@ -1,0 +1,35 @@
+.modal {
+    position: relative;
+    
+   .overlay {
+        background: rgba(0, 0, 0, 0.603);
+        width: 300vh;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &__wrapper {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        border: 1px solid #FF7143;
+        padding: 100px;
+        background: #eee;
+        animation: modal-animation 0.4s ease-out;
+    }
+    &__label {
+        font-family: DM Sans;
+    }
+    &__input {
+        margin-bottom: 30px;
+        margin-left: 30px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(58, 56, 56);
+    }
+}

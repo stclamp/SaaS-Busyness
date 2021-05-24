@@ -1,0 +1,29 @@
+.header {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 44px;
+    }
+    &__menu {
+        &-list{
+            display: flex;
+        }
+        &-item {
+            list-style: none;
+            margin-right: 49px;
+            a {
+                color: #696871;
+                text-decoration: none;
+                font-family: DM Sans;
+                font-weight: 700;
+                font-size: 15px;
+                &:hover {
+                    color: #19191B;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #5454D4;
+                }
+            }
+        }
+    }
+
+}

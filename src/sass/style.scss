@@ -1,0 +1,40 @@
+@import 'block/header';
+@import 'block/modal';
+@import 'block/btns';
+@import 'block/promo';
+@import 'block/subscript';
+@import 'block/metrics';
+@import 'block/prices';
+
+* {
+    box-sizing: border-box;
+    &::after {
+        box-sizing: border-box;
+    }
+    &::before {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    width: 1146px;
+    margin: 0 auto;
+
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes modal-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

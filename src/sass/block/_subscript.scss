@@ -1,0 +1,26 @@
+.subscript {
+    margin-top: 160px;
+    &__wrapper {
+        display: flex;
+    }
+    &__rightside {
+        margin-top: 70px;
+        margin-left: 200px;
+    }
+    &__title {
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 50px;
+        color: #19191B;
+    }
+    &__subtitle {
+        font-family: Mulish;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #696871;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 460px;
+    }
+}

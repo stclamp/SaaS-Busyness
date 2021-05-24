@@ -1,0 +1,57 @@
+.main-btn {
+        background: #FF7143;
+        padding: 19px 60px;
+        border-radius: 10px;
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 17px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.4s all;
+        &:hover {
+            background-color:#db5528;
+        }
+}
+
+.modal-btn {
+    border: none;
+    display: block;
+    margin: 20px auto 0 auto;
+    cursor: pointer;
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    color: #19191B;
+    transition: 0.2s all;
+    &:hover {
+        color:#FF7143;
+    }
+}
+
+.promo-btn {
+    background: #5454D4;
+    &:hover {
+        background-color: #1b1b8a;
+    }
+}
+
+.link {
+        font-family: DM Sans;
+        font-size: 17px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #5454D4;
+        transition: 0.4s ease-in-out;
+        background: none;
+        padding: 0;
+        &:hover {
+            color: #2b2b99;
+            background: none;
+        }
+}

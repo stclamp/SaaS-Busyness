@@ -1,0 +1,48 @@
+.promo {
+    margin-top: 100px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__leftside {
+        margin-top: 45px;
+        margin-right: 74px;
+    }
+    &__title {
+        font-family: DM Sans;
+        font-size: 80px;
+        font-weight: bold;
+        color: #19191B;
+        line-height: 80px;
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        margin-top: 30px;
+        margin-bottom: 70px;
+        font-family: Mulish;
+        font-weight: 400;
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+    }
+    &__down{
+        margin-left: 40px;
+        align-self: center;
+        img {
+            padding: 20px;
+            border: 1px solid #E7E7E7;
+            border-radius: 100%;
+            transition: 0.5s ease-in-out;
+           &:hover {
+               background-color: #FF7143;
+           }
+        }
+    }
+    &__partners {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+}

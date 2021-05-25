@@ -4,12 +4,14 @@
     justify-content: space-between;
     margin-top: 44px;
     .burger_menu {
+      display: none;
       span {
         border: 5px solid black;
         width: 60px;
-        margin-bottom: 10px;
+        margin-bottom: 9px;
         background: #000;
         display: flex;
+        border-radius: 10px;
       }
     }
   }

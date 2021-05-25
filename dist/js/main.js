@@ -112,10 +112,38 @@ document.addEventListener('DOMContentLoaded', () => {
     //BURGER 
 
     const burgerElem = document.querySelector('.burger_menu');
-    const contentMenuElem = document.querySelector('.header__menu')
+    const contentMenuElem = document.querySelector('.header__menu');
 
-    burgerElem.addEventListener('click', () => {
+    // burgerElem.addEventListener('click', () => {
+    //     contentMenuElem.classList.toggle('header__menu-active');
+    // });
+
+    // const closeMenu = () => {
+    //     contentMenuElem.classList.remove('header__menu-active');
+    // }
+
+    // burgerMenuElems.forEach(item => {
+    //     item.addEventListener('click', closeMenu)
+    // });
+
+
+    const handlerMenu = event => {
+        const target = event.target;
+        const parent = target.closest('.header__menu');
+        if ((!parent && target !== burgerElem) || target.classList.contains('header__menu-link')) {
+            toggleMenu();
+        }
+    };
+
+    const toggleMenu = () => {
         contentMenuElem.classList.toggle('header__menu-active');
-    })
+
+        if (contentMenuElem.classList.contains('header__menu-active')) {
+            document.body.addEventListener('click', handlerMenu);
+        } else {
+            document.body.removeEventListener('click', handlerMenu);
+        }
+    };
+    burgerElem.addEventListener('click', toggleMenu);
 });
 
